@@ -91,4 +91,17 @@ describe("Given a strictEquals function", () => {
       expect(hasEqualsValues).toBe(result);
     });
   });
+
+  describe("When it receives 'Water' and 'oil'", () => {
+    test("Then it should return false", () => {
+      const valueA = "Water";
+      const valueB = "oil";
+
+      const result = false;
+
+      const hasEqualsValues = strictEquals(valueA, !valueB);
+
+      expect(hasEqualsValues).toBe(result);
+    });
+  });
 });
