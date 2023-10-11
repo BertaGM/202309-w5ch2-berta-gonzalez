@@ -78,4 +78,17 @@ describe("Given a strictEquals function", () => {
       expect(hasEqualsValues).toBe(result);
     });
   });
+
+  describe("When it receives false and false", () => {
+    test("Then it should return true", () => {
+      const valueA = false;
+      const valueB = false;
+
+      const result = true;
+
+      const hasEqualsValues = strictEquals(valueA, valueB);
+
+      expect(hasEqualsValues).toBe(result);
+    });
+  });
 });
