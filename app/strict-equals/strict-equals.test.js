@@ -52,4 +52,56 @@ describe("Given a strictEquals function", () => {
       expect(hasEqualsValues).toBe(result);
     });
   });
+
+  describe("When it receives 1 and '1'", () => {
+    test("Then it should return false", () => {
+      const valueA = 1;
+      const valueB = "1";
+
+      const result = false;
+
+      const hasEqualsValues = strictEquals(valueA, !valueB);
+
+      expect(hasEqualsValues).toBe(result);
+    });
+  });
+
+  describe("When it receives true and false", () => {
+    test("Then it should return false", () => {
+      const valueA = true;
+      const valueB = false;
+
+      const result = false;
+
+      const hasEqualsValues = strictEquals(valueA, valueB);
+
+      expect(hasEqualsValues).toBe(result);
+    });
+  });
+
+  describe("When it receives false and false", () => {
+    test("Then it should return true", () => {
+      const valueA = false;
+      const valueB = false;
+
+      const result = true;
+
+      const hasEqualsValues = strictEquals(valueA, valueB);
+
+      expect(hasEqualsValues).toBe(result);
+    });
+  });
+
+  describe("When it receives 'Water' and 'oil'", () => {
+    test("Then it should return false", () => {
+      const valueA = "Water";
+      const valueB = "oil";
+
+      const result = false;
+
+      const hasEqualsValues = strictEquals(valueA, !valueB);
+
+      expect(hasEqualsValues).toBe(result);
+    });
+  });
 });
